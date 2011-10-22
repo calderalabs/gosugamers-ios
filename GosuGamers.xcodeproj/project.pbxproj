@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47D846BC1452A61D0044746E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BB1452A61D0044746E /* UIKit.framework */; };
+		47D846BE1452A61D0044746E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BD1452A61D0044746E /* Foundation.framework */; };
+		47D846C01452A61D0044746E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BF1452A61D0044746E /* CoreGraphics.framework */; };
+		47D846C61452A61D0044746E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47D846C41452A61D0044746E /* InfoPlist.strings */; };
+		47D846C81452A61D0044746E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846C71452A61D0044746E /* main.m */; };
+		47D846CC1452A61D0044746E /* GGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846CB1452A61D0044746E /* GGAppDelegate.m */; };
+		47D846CF1452A61D0044746E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */; };
+		47D846D21452A61D0044746E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */; };
+		47D846D51452A61D0044746E /* GGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846D41452A61D0044746E /* GGFirstViewController.m */; };
+		47D846D71452A61D0044746E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D61452A61D0044746E /* first.png */; };
+		47D846D91452A61D0044746E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D81452A61D0044746E /* first@2x.png */; };
+		47D846DC1452A61D0044746E /* GGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846DB1452A61D0044746E /* GGSecondViewController.m */; };
+		47D846DE1452A61D0044746E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846DD1452A61D0044746E /* second.png */; };
+		47D846E01452A61D0044746E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846DF1452A61D0044746E /* second@2x.png */; };
+		47D846E81452A61D0044746E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846E71452A61D0044746E /* SenTestingKit.framework */; };
+		47D846E91452A61D0044746E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BB1452A61D0044746E /* UIKit.framework */; };
+		47D846EA1452A61D0044746E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BD1452A61D0044746E /* Foundation.framework */; };
+		47D846F21452A61D0044746E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47D846F01452A61D0044746E /* InfoPlist.strings */; };
+		47D846F51452A61D0044746E /* GosuGamersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846F41452A61D0044746E /* GosuGamersTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47D846EB1452A61D0044746E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47D846AE1452A61C0044746E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D846B61452A61D0044746E;
+			remoteInfo = GosuGamers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47D846B71452A61D0044746E /* GosuGamers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GosuGamers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D846BB1452A61D0044746E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47D846BD1452A61D0044746E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47D846BF1452A61D0044746E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47D846C31452A61D0044746E /* GosuGamers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GosuGamers-Info.plist"; sourceTree = "<group>"; };
+		47D846C51452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47D846C71452A61D0044746E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47D846C91452A61D0044746E /* GosuGamers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GosuGamers-Prefix.pch"; sourceTree = "<group>"; };
+		47D846CA1452A61D0044746E /* GGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGAppDelegate.h; sourceTree = "<group>"; };
+		47D846CB1452A61D0044746E /* GGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGAppDelegate.m; sourceTree = "<group>"; };
+		47D846CE1452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		47D846D11452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		47D846D31452A61D0044746E /* GGFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGFirstViewController.h; sourceTree = "<group>"; };
+		47D846D41452A61D0044746E /* GGFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGFirstViewController.m; sourceTree = "<group>"; };
+		47D846D61452A61D0044746E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		47D846D81452A61D0044746E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		47D846DA1452A61D0044746E /* GGSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGSecondViewController.h; sourceTree = "<group>"; };
+		47D846DB1452A61D0044746E /* GGSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGSecondViewController.m; sourceTree = "<group>"; };
+		47D846DD1452A61D0044746E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		47D846DF1452A61D0044746E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		47D846E61452A61D0044746E /* GosuGamersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosuGamersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D846E71452A61D0044746E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		47D846EF1452A61D0044746E /* GosuGamersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GosuGamersTests-Info.plist"; sourceTree = "<group>"; };
+		47D846F11452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47D846F31452A61D0044746E /* GosuGamersTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GosuGamersTests.h; sourceTree = "<group>"; };
+		47D846F41452A61D0044746E /* GosuGamersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GosuGamersTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47D846B41452A61D0044746E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846BC1452A61D0044746E /* UIKit.framework in Frameworks */,
+				47D846BE1452A61D0044746E /* Foundation.framework in Frameworks */,
+				47D846C01452A61D0044746E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D846E21452A61D0044746E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846E81452A61D0044746E /* SenTestingKit.framework in Frameworks */,
+				47D846E91452A61D0044746E /* UIKit.framework in Frameworks */,
+				47D846EA1452A61D0044746E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47D846AC1452A61C0044746E = {
+			isa = PBXGroup;
+			children = (
+				47D846C11452A61D0044746E /* GosuGamers */,
+				47D846ED1452A61D0044746E /* GosuGamersTests */,
+				47D846BA1452A61D0044746E /* Frameworks */,
+				47D846B81452A61D0044746E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47D846B81452A61D0044746E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47D846B71452A61D0044746E /* GosuGamers.app */,
+				47D846E61452A61D0044746E /* GosuGamersTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47D846BA1452A61D0044746E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47D846BB1452A61D0044746E /* UIKit.framework */,
+				47D846BD1452A61D0044746E /* Foundation.framework */,
+				47D846BF1452A61D0044746E /* CoreGraphics.framework */,
+				47D846E71452A61D0044746E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47D846C11452A61D0044746E /* GosuGamers */ = {
+			isa = PBXGroup;
+			children = (
+				47D846CA1452A61D0044746E /* GGAppDelegate.h */,
+				47D846CB1452A61D0044746E /* GGAppDelegate.m */,
+				47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */,
+				47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */,
+				47D846D31452A61D0044746E /* GGFirstViewController.h */,
+				47D846D41452A61D0044746E /* GGFirstViewController.m */,
+				47D846D61452A61D0044746E /* first.png */,
+				47D846D81452A61D0044746E /* first@2x.png */,
+				47D846DA1452A61D0044746E /* GGSecondViewController.h */,
+				47D846DB1452A61D0044746E /* GGSecondViewController.m */,
+				47D846DD1452A61D0044746E /* second.png */,
+				47D846DF1452A61D0044746E /* second@2x.png */,
+				47D846C21452A61D0044746E /* Supporting Files */,
+			);
+			path = GosuGamers;
+			sourceTree = "<group>";
+		};
+		47D846C21452A61D0044746E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47D846C31452A61D0044746E /* GosuGamers-Info.plist */,
+				47D846C41452A61D0044746E /* InfoPlist.strings */,
+				47D846C71452A61D0044746E /* main.m */,
+				47D846C91452A61D0044746E /* GosuGamers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47D846ED1452A61D0044746E /* GosuGamersTests */ = {
+			isa = PBXGroup;
+			children = (
+				47D846F31452A61D0044746E /* GosuGamersTests.h */,
+				47D846F41452A61D0044746E /* GosuGamersTests.m */,
+				47D846EE1452A61D0044746E /* Supporting Files */,
+			);
+			path = GosuGamersTests;
+			sourceTree = "<group>";
+		};
+		47D846EE1452A61D0044746E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47D846EF1452A61D0044746E /* GosuGamersTests-Info.plist */,
+				47D846F01452A61D0044746E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47D846B61452A61D0044746E /* GosuGamers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47D846F81452A61D0044746E /* Build configuration list for PBXNativeTarget "GosuGamers" */;
+			buildPhases = (
+				47D846B31452A61D0044746E /* Sources */,
+				47D846B41452A61D0044746E /* Frameworks */,
+				47D846B51452A61D0044746E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GosuGamers;
+			productName = GosuGamers;
+			productReference = 47D846B71452A61D0044746E /* GosuGamers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47D846E51452A61D0044746E /* GosuGamersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47D846FB1452A61D0044746E /* Build configuration list for PBXNativeTarget "GosuGamersTests" */;
+			buildPhases = (
+				47D846E11452A61D0044746E /* Sources */,
+				47D846E21452A61D0044746E /* Frameworks */,
+				47D846E31452A61D0044746E /* Resources */,
+				47D846E41452A61D0044746E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47D846EC1452A61D0044746E /* PBXTargetDependency */,
+			);
+			name = GosuGamersTests;
+			productName = GosuGamersTests;
+			productReference = 47D846E61452A61D0044746E /* GosuGamersTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47D846AE1452A61C0044746E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 47D846B11452A61C0044746E /* Build configuration list for PBXProject "GosuGamers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 47D846AC1452A61C0044746E;
+			productRefGroup = 47D846B81452A61D0044746E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47D846B61452A61D0044746E /* GosuGamers */,
+				47D846E51452A61D0044746E /* GosuGamersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47D846B51452A61D0044746E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846C61452A61D0044746E /* InfoPlist.strings in Resources */,
+				47D846CF1452A61D0044746E /* MainStoryboard_iPhone.storyboard in Resources */,
+				47D846D21452A61D0044746E /* MainStoryboard_iPad.storyboard in Resources */,
+				47D846D71452A61D0044746E /* first.png in Resources */,
+				47D846D91452A61D0044746E /* first@2x.png in Resources */,
+				47D846DE1452A61D0044746E /* second.png in Resources */,
+				47D846E01452A61D0044746E /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D846E31452A61D0044746E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846F21452A61D0044746E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47D846E41452A61D0044746E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47D846B31452A61D0044746E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846C81452A61D0044746E /* main.m in Sources */,
+				47D846CC1452A61D0044746E /* GGAppDelegate.m in Sources */,
+				47D846D51452A61D0044746E /* GGFirstViewController.m in Sources */,
+				47D846DC1452A61D0044746E /* GGSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D846E11452A61D0044746E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D846F51452A61D0044746E /* GosuGamersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47D846EC1452A61D0044746E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47D846B61452A61D0044746E /* GosuGamers */;
+			targetProxy = 47D846EB1452A61D0044746E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47D846C41452A61D0044746E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D846C51452A61D0044746E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D846CE1452A61D0044746E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D846D11452A61D0044746E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		47D846F01452A61D0044746E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D846F11452A61D0044746E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47D846F61452A61D0044746E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47D846F71452A61D0044746E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47D846F91452A61D0044746E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47D846FA1452A61D0044746E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47D846FC1452A61D0044746E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GosuGamers.app/GosuGamers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				INFOPLIST_FILE = "GosuGamersTests/GosuGamersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		47D846FD1452A61D0044746E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GosuGamers.app/GosuGamers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				INFOPLIST_FILE = "GosuGamersTests/GosuGamersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47D846B11452A61C0044746E /* Build configuration list for PBXProject "GosuGamers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D846F61452A61D0044746E /* Debug */,
+				47D846F71452A61D0044746E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47D846F81452A61D0044746E /* Build configuration list for PBXNativeTarget "GosuGamers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D846F91452A61D0044746E /* Debug */,
+				47D846FA1452A61D0044746E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47D846FB1452A61D0044746E /* Build configuration list for PBXNativeTarget "GosuGamersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D846FC1452A61D0044746E /* Debug */,
+				47D846FD1452A61D0044746E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47D846AE1452A61C0044746E /* Project object */;
+}
