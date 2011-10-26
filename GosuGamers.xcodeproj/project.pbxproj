@@ -13,19 +13,39 @@
 		47D846C61452A61D0044746E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47D846C41452A61D0044746E /* InfoPlist.strings */; };
 		47D846C81452A61D0044746E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846C71452A61D0044746E /* main.m */; };
 		47D846CC1452A61D0044746E /* GGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846CB1452A61D0044746E /* GGAppDelegate.m */; };
-		47D846CF1452A61D0044746E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */; };
-		47D846D21452A61D0044746E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */; };
-		47D846D51452A61D0044746E /* GGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846D41452A61D0044746E /* GGFirstViewController.m */; };
-		47D846D71452A61D0044746E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D61452A61D0044746E /* first.png */; };
-		47D846D91452A61D0044746E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846D81452A61D0044746E /* first@2x.png */; };
-		47D846DC1452A61D0044746E /* GGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846DB1452A61D0044746E /* GGSecondViewController.m */; };
-		47D846DE1452A61D0044746E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846DD1452A61D0044746E /* second.png */; };
-		47D846E01452A61D0044746E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D846DF1452A61D0044746E /* second@2x.png */; };
+		47D846CF1452A61D0044746E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D846CD1452A61D0044746E /* MainStoryboard.storyboard */; };
 		47D846E81452A61D0044746E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846E71452A61D0044746E /* SenTestingKit.framework */; };
 		47D846E91452A61D0044746E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BB1452A61D0044746E /* UIKit.framework */; };
 		47D846EA1452A61D0044746E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BD1452A61D0044746E /* Foundation.framework */; };
 		47D846F21452A61D0044746E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47D846F01452A61D0044746E /* InfoPlist.strings */; };
 		47D846F51452A61D0044746E /* GosuGamersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D846F41452A61D0044746E /* GosuGamersTests.m */; };
+		47E31B8E1456B0FC00C5F621 /* GGGameListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E31B8C1456B0FC00C5F621 /* GGGameListController.m */; };
+		47E31B921456B2BC00C5F621 /* GGGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E31B911456B2BC00C5F621 /* GGGame.m */; };
+		47E31B931456B2BC00C5F621 /* GGGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E31B911456B2BC00C5F621 /* GGGame.m */; };
+		47ECCD161456DFAD009FC6D3 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD0B1456DF34009FC6D3 /* libRestKitJSONParserJSONKit.a */; };
+		47ECCD171456DFAD009FC6D3 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCCFF1456DF34009FC6D3 /* libRestKitNetwork.a */; };
+		47ECCD181456DFAD009FC6D3 /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD011456DF34009FC6D3 /* libRestKitObjectMapping.a */; };
+		47ECCD191456DFAD009FC6D3 /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD031456DF34009FC6D3 /* libRestKitSupport.a */; };
+		47ECCD1D1456DFC6009FC6D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD1A1456DFC5009FC6D3 /* CFNetwork.framework */; };
+		47ECCD1E1456DFC6009FC6D3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD1B1456DFC5009FC6D3 /* MobileCoreServices.framework */; };
+		47ECCD1F1456DFC6009FC6D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ECCD1C1456DFC5009FC6D3 /* SystemConfiguration.framework */; };
+		47ECCD221456E460009FC6D3 /* GGRemoteListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD211456E460009FC6D3 /* GGRemoteListController.m */; };
+		47ECCD251456F2DB009FC6D3 /* GGRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD241456F2DB009FC6D3 /* GGRemoteObject.m */; };
+		47ECCD261456F2DB009FC6D3 /* GGRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD241456F2DB009FC6D3 /* GGRemoteObject.m */; };
+		47ECCD291456F5C5009FC6D3 /* GGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD281456F5C5009FC6D3 /* GGNews.m */; };
+		47ECCD2A1456F5C5009FC6D3 /* GGNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD281456F5C5009FC6D3 /* GGNews.m */; };
+		47ECCD351456FF5C009FC6D3 /* GGNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD331456FF5C009FC6D3 /* GGNewsListController.m */; };
+		47ECCD361456FF5C009FC6D3 /* GGNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD331456FF5C009FC6D3 /* GGNewsListController.m */; };
+		47ECCD3A14570E11009FC6D3 /* SectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ECCD3914570E11009FC6D3 /* SectionsStoryboard.storyboard */; };
+		47ECCD3B14570E11009FC6D3 /* SectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ECCD3914570E11009FC6D3 /* SectionsStoryboard.storyboard */; };
+		47ECCD44145729C2009FC6D3 /* GGMatchesListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD43145729C2009FC6D3 /* GGMatchesListController.m */; };
+		47ECCD45145729C2009FC6D3 /* GGMatchesListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD43145729C2009FC6D3 /* GGMatchesListController.m */; };
+		47ECCD48145729D1009FC6D3 /* GGReplaysListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD47145729D1009FC6D3 /* GGReplaysListController.m */; };
+		47ECCD49145729D1009FC6D3 /* GGReplaysListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD47145729D1009FC6D3 /* GGReplaysListController.m */; };
+		47ECCD4C14572A24009FC6D3 /* GGMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD4B14572A23009FC6D3 /* GGMatch.m */; };
+		47ECCD4D14572A24009FC6D3 /* GGMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD4B14572A23009FC6D3 /* GGMatch.m */; };
+		47ECCD5014572A2C009FC6D3 /* GGReplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD4F14572A2C009FC6D3 /* GGReplay.m */; };
+		47ECCD5114572A2C009FC6D3 /* GGReplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD4F14572A2C009FC6D3 /* GGReplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +55,90 @@
 			proxyType = 1;
 			remoteGlobalIDString = 47D846B61452A61D0044746E;
 			remoteInfo = GosuGamers;
+		};
+		47ECCCFE1456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A07FC1255161B00976E89;
+			remoteInfo = RestKitNetwork;
+		};
+		47ECCD001456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A08031255162C00976E89;
+			remoteInfo = RestKitObjectMapping;
+		};
+		47ECCD021456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A080C12551D3000976E89;
+			remoteInfo = RestKitSupport;
+		};
+		47ECCD041456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20808DBD13DE8CDC000A156A;
+			remoteInfo = "RestKitJSONParser+NXJSON";
+		};
+		47ECCD061456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E64F125231F600531FA8;
+			remoteInfo = "RestKitJSONParser+YAJL";
+		};
+		47ECCD081456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E66B1252353700531FA8;
+			remoteInfo = "RestKitJSONParser+SBJSON";
+		};
+		47ECCD0A1456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 73057FD11331AD2E001908EE;
+			remoteInfo = "RestKitJSONParser+JSONKit";
+		};
+		47ECCD0C1456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25BD43BD1340315800DBACDD;
+			remoteInfo = "RestKitXMLParser+Libxml";
+		};
+		47ECCD0E1456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A081412551D5300976E89;
+			remoteInfo = RestKitCoreData;
+		};
+		47ECCD101456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2523360511E79F090048F9B4;
+			remoteInfo = RestKitThree20;
+		};
+		47ECCD121456DF34009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6C39A510FE5C95008F47C5;
+			remoteInfo = "RestKit Specs";
+		};
+		47ECCD141456DF8C009FC6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 255B7588133BABBF00ED76AD;
+			remoteInfo = RestKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -49,22 +153,38 @@
 		47D846C91452A61D0044746E /* GosuGamers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GosuGamers-Prefix.pch"; sourceTree = "<group>"; };
 		47D846CA1452A61D0044746E /* GGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGAppDelegate.h; sourceTree = "<group>"; };
 		47D846CB1452A61D0044746E /* GGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGAppDelegate.m; sourceTree = "<group>"; };
-		47D846CE1452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		47D846D11452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		47D846D31452A61D0044746E /* GGFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGFirstViewController.h; sourceTree = "<group>"; };
-		47D846D41452A61D0044746E /* GGFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGFirstViewController.m; sourceTree = "<group>"; };
-		47D846D61452A61D0044746E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		47D846D81452A61D0044746E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		47D846DA1452A61D0044746E /* GGSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGSecondViewController.h; sourceTree = "<group>"; };
-		47D846DB1452A61D0044746E /* GGSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGSecondViewController.m; sourceTree = "<group>"; };
-		47D846DD1452A61D0044746E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		47D846DF1452A61D0044746E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		47D846CE1452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		47D846E61452A61D0044746E /* GosuGamersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GosuGamersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D846E71452A61D0044746E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		47D846EF1452A61D0044746E /* GosuGamersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GosuGamersTests-Info.plist"; sourceTree = "<group>"; };
 		47D846F11452A61D0044746E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47D846F31452A61D0044746E /* GosuGamersTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GosuGamersTests.h; sourceTree = "<group>"; };
 		47D846F41452A61D0044746E /* GosuGamersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GosuGamersTests.m; sourceTree = "<group>"; };
+		47E31B8B1456B0FC00C5F621 /* GGGameListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGGameListController.h; sourceTree = "<group>"; };
+		47E31B8C1456B0FC00C5F621 /* GGGameListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGGameListController.m; sourceTree = "<group>"; };
+		47E31B901456B2BC00C5F621 /* GGGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGGame.h; sourceTree = "<group>"; };
+		47E31B911456B2BC00C5F621 /* GGGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGGame.m; sourceTree = "<group>"; };
+		47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		47ECCD1A1456DFC5009FC6D3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		47ECCD1B1456DFC5009FC6D3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		47ECCD1C1456DFC5009FC6D3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		47ECCD201456E460009FC6D3 /* GGRemoteListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGRemoteListController.h; sourceTree = "<group>"; };
+		47ECCD211456E460009FC6D3 /* GGRemoteListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRemoteListController.m; sourceTree = "<group>"; };
+		47ECCD231456F2DB009FC6D3 /* GGRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGRemoteObject.h; sourceTree = "<group>"; };
+		47ECCD241456F2DB009FC6D3 /* GGRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRemoteObject.m; sourceTree = "<group>"; };
+		47ECCD271456F5C5009FC6D3 /* GGNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGNews.h; sourceTree = "<group>"; };
+		47ECCD281456F5C5009FC6D3 /* GGNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNews.m; sourceTree = "<group>"; };
+		47ECCD321456FF5C009FC6D3 /* GGNewsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGNewsListController.h; sourceTree = "<group>"; };
+		47ECCD331456FF5C009FC6D3 /* GGNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNewsListController.m; sourceTree = "<group>"; };
+		47ECCD3914570E11009FC6D3 /* SectionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SectionsStoryboard.storyboard; sourceTree = "<group>"; };
+		47ECCD42145729C2009FC6D3 /* GGMatchesListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMatchesListController.h; sourceTree = "<group>"; };
+		47ECCD43145729C2009FC6D3 /* GGMatchesListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMatchesListController.m; sourceTree = "<group>"; };
+		47ECCD46145729D1009FC6D3 /* GGReplaysListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGReplaysListController.h; sourceTree = "<group>"; };
+		47ECCD47145729D1009FC6D3 /* GGReplaysListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGReplaysListController.m; sourceTree = "<group>"; };
+		47ECCD4A14572A23009FC6D3 /* GGMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMatch.h; sourceTree = "<group>"; };
+		47ECCD4B14572A23009FC6D3 /* GGMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMatch.m; sourceTree = "<group>"; };
+		47ECCD4E14572A2C009FC6D3 /* GGReplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGReplay.h; sourceTree = "<group>"; };
+		47ECCD4F14572A2C009FC6D3 /* GGReplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGReplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +192,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47ECCD1D1456DFC6009FC6D3 /* CFNetwork.framework in Frameworks */,
+				47ECCD1E1456DFC6009FC6D3 /* MobileCoreServices.framework in Frameworks */,
+				47ECCD1F1456DFC6009FC6D3 /* SystemConfiguration.framework in Frameworks */,
+				47ECCD161456DFAD009FC6D3 /* libRestKitJSONParserJSONKit.a in Frameworks */,
+				47ECCD171456DFAD009FC6D3 /* libRestKitNetwork.a in Frameworks */,
+				47ECCD181456DFAD009FC6D3 /* libRestKitObjectMapping.a in Frameworks */,
+				47ECCD191456DFAD009FC6D3 /* libRestKitSupport.a in Frameworks */,
 				47D846BC1452A61D0044746E /* UIKit.framework in Frameworks */,
 				47D846BE1452A61D0044746E /* Foundation.framework in Frameworks */,
 				47D846C01452A61D0044746E /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				47D846C11452A61D0044746E /* GosuGamers */,
+				47D846C21452A61D0044746E /* Supporting Files */,
 				47D846ED1452A61D0044746E /* GosuGamersTests */,
 				47D846BA1452A61D0044746E /* Frameworks */,
 				47D846B81452A61D0044746E /* Products */,
@@ -113,6 +241,10 @@
 		47D846BA1452A61D0044746E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */,
+				47ECCD1A1456DFC5009FC6D3 /* CFNetwork.framework */,
+				47ECCD1B1456DFC5009FC6D3 /* MobileCoreServices.framework */,
+				47ECCD1C1456DFC5009FC6D3 /* SystemConfiguration.framework */,
 				47D846BB1452A61D0044746E /* UIKit.framework */,
 				47D846BD1452A61D0044746E /* Foundation.framework */,
 				47D846BF1452A61D0044746E /* CoreGraphics.framework */,
@@ -124,19 +256,11 @@
 		47D846C11452A61D0044746E /* GosuGamers */ = {
 			isa = PBXGroup;
 			children = (
+				47ECCD3E14570E57009FC6D3 /* Storyboards */,
+				47ECCD3D14570E48009FC6D3 /* Controllers */,
+				47ECCD3C14570E3C009FC6D3 /* Models */,
 				47D846CA1452A61D0044746E /* GGAppDelegate.h */,
 				47D846CB1452A61D0044746E /* GGAppDelegate.m */,
-				47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */,
-				47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */,
-				47D846D31452A61D0044746E /* GGFirstViewController.h */,
-				47D846D41452A61D0044746E /* GGFirstViewController.m */,
-				47D846D61452A61D0044746E /* first.png */,
-				47D846D81452A61D0044746E /* first@2x.png */,
-				47D846DA1452A61D0044746E /* GGSecondViewController.h */,
-				47D846DB1452A61D0044746E /* GGSecondViewController.m */,
-				47D846DD1452A61D0044746E /* second.png */,
-				47D846DF1452A61D0044746E /* second@2x.png */,
-				47D846C21452A61D0044746E /* Supporting Files */,
 			);
 			path = GosuGamers;
 			sourceTree = "<group>";
@@ -150,6 +274,7 @@
 				47D846C91452A61D0044746E /* GosuGamers-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = GosuGamers;
 			sourceTree = "<group>";
 		};
 		47D846ED1452A61D0044746E /* GosuGamersTests */ = {
@@ -171,6 +296,67 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		47ECCCEB1456DF34009FC6D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47ECCCFF1456DF34009FC6D3 /* libRestKitNetwork.a */,
+				47ECCD011456DF34009FC6D3 /* libRestKitObjectMapping.a */,
+				47ECCD031456DF34009FC6D3 /* libRestKitSupport.a */,
+				47ECCD051456DF34009FC6D3 /* libRestKitJSONParserNXJSON.a */,
+				47ECCD071456DF34009FC6D3 /* libRestKitJSONParserYAJL.a */,
+				47ECCD091456DF34009FC6D3 /* libRestKitJSONParserSBJSON.a */,
+				47ECCD0B1456DF34009FC6D3 /* libRestKitJSONParserJSONKit.a */,
+				47ECCD0D1456DF34009FC6D3 /* libRestKitXMLParserLibxml.a */,
+				47ECCD0F1456DF34009FC6D3 /* libRestKitCoreData.a */,
+				47ECCD111456DF34009FC6D3 /* libRestKitThree20.a */,
+				47ECCD131456DF34009FC6D3 /* RestKitSpecs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47ECCD3C14570E3C009FC6D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47E31B901456B2BC00C5F621 /* GGGame.h */,
+				47E31B911456B2BC00C5F621 /* GGGame.m */,
+				47ECCD231456F2DB009FC6D3 /* GGRemoteObject.h */,
+				47ECCD241456F2DB009FC6D3 /* GGRemoteObject.m */,
+				47ECCD271456F5C5009FC6D3 /* GGNews.h */,
+				47ECCD281456F5C5009FC6D3 /* GGNews.m */,
+				47ECCD4A14572A23009FC6D3 /* GGMatch.h */,
+				47ECCD4B14572A23009FC6D3 /* GGMatch.m */,
+				47ECCD4E14572A2C009FC6D3 /* GGReplay.h */,
+				47ECCD4F14572A2C009FC6D3 /* GGReplay.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		47ECCD3D14570E48009FC6D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47E31B8B1456B0FC00C5F621 /* GGGameListController.h */,
+				47E31B8C1456B0FC00C5F621 /* GGGameListController.m */,
+				47ECCD201456E460009FC6D3 /* GGRemoteListController.h */,
+				47ECCD211456E460009FC6D3 /* GGRemoteListController.m */,
+				47ECCD321456FF5C009FC6D3 /* GGNewsListController.h */,
+				47ECCD331456FF5C009FC6D3 /* GGNewsListController.m */,
+				47ECCD42145729C2009FC6D3 /* GGMatchesListController.h */,
+				47ECCD43145729C2009FC6D3 /* GGMatchesListController.m */,
+				47ECCD46145729D1009FC6D3 /* GGReplaysListController.h */,
+				47ECCD47145729D1009FC6D3 /* GGReplaysListController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		47ECCD3E14570E57009FC6D3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				47D846CD1452A61D0044746E /* MainStoryboard.storyboard */,
+				47ECCD3914570E11009FC6D3 /* SectionsStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +371,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				47ECCD151456DF8C009FC6D3 /* PBXTargetDependency */,
 			);
 			name = GosuGamers;
 			productName = GosuGamers;
@@ -228,6 +415,12 @@
 			mainGroup = 47D846AC1452A61C0044746E;
 			productRefGroup = 47D846B81452A61D0044746E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 47ECCCEB1456DF34009FC6D3 /* Products */;
+					ProjectRef = 47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				47D846B61452A61D0044746E /* GosuGamers */,
@@ -236,18 +429,94 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		47ECCCFF1456DF34009FC6D3 /* libRestKitNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitNetwork.a;
+			remoteRef = 47ECCCFE1456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD011456DF34009FC6D3 /* libRestKitObjectMapping.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitObjectMapping.a;
+			remoteRef = 47ECCD001456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD031456DF34009FC6D3 /* libRestKitSupport.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitSupport.a;
+			remoteRef = 47ECCD021456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD051456DF34009FC6D3 /* libRestKitJSONParserNXJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserNXJSON.a;
+			remoteRef = 47ECCD041456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD071456DF34009FC6D3 /* libRestKitJSONParserYAJL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserYAJL.a;
+			remoteRef = 47ECCD061456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD091456DF34009FC6D3 /* libRestKitJSONParserSBJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserSBJSON.a;
+			remoteRef = 47ECCD081456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD0B1456DF34009FC6D3 /* libRestKitJSONParserJSONKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserJSONKit.a;
+			remoteRef = 47ECCD0A1456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD0D1456DF34009FC6D3 /* libRestKitXMLParserLibxml.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitXMLParserLibxml.a;
+			remoteRef = 47ECCD0C1456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD0F1456DF34009FC6D3 /* libRestKitCoreData.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitCoreData.a;
+			remoteRef = 47ECCD0E1456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD111456DF34009FC6D3 /* libRestKitThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitThree20.a;
+			remoteRef = 47ECCD101456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47ECCD131456DF34009FC6D3 /* RestKitSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RestKitSpecs.app;
+			remoteRef = 47ECCD121456DF34009FC6D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		47D846B51452A61D0044746E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				47D846C61452A61D0044746E /* InfoPlist.strings in Resources */,
-				47D846CF1452A61D0044746E /* MainStoryboard_iPhone.storyboard in Resources */,
-				47D846D21452A61D0044746E /* MainStoryboard_iPad.storyboard in Resources */,
-				47D846D71452A61D0044746E /* first.png in Resources */,
-				47D846D91452A61D0044746E /* first@2x.png in Resources */,
-				47D846DE1452A61D0044746E /* second.png in Resources */,
-				47D846E01452A61D0044746E /* second@2x.png in Resources */,
+				47D846CF1452A61D0044746E /* MainStoryboard.storyboard in Resources */,
+				47ECCD3A14570E11009FC6D3 /* SectionsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D846F21452A61D0044746E /* InfoPlist.strings in Resources */,
+				47ECCD3B14570E11009FC6D3 /* SectionsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +554,16 @@
 			files = (
 				47D846C81452A61D0044746E /* main.m in Sources */,
 				47D846CC1452A61D0044746E /* GGAppDelegate.m in Sources */,
-				47D846D51452A61D0044746E /* GGFirstViewController.m in Sources */,
-				47D846DC1452A61D0044746E /* GGSecondViewController.m in Sources */,
+				47E31B8E1456B0FC00C5F621 /* GGGameListController.m in Sources */,
+				47E31B921456B2BC00C5F621 /* GGGame.m in Sources */,
+				47ECCD221456E460009FC6D3 /* GGRemoteListController.m in Sources */,
+				47ECCD251456F2DB009FC6D3 /* GGRemoteObject.m in Sources */,
+				47ECCD291456F5C5009FC6D3 /* GGNews.m in Sources */,
+				47ECCD351456FF5C009FC6D3 /* GGNewsListController.m in Sources */,
+				47ECCD44145729C2009FC6D3 /* GGMatchesListController.m in Sources */,
+				47ECCD48145729D1009FC6D3 /* GGReplaysListController.m in Sources */,
+				47ECCD4C14572A24009FC6D3 /* GGMatch.m in Sources */,
+				47ECCD5014572A2C009FC6D3 /* GGReplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +572,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D846F51452A61D0044746E /* GosuGamersTests.m in Sources */,
+				47E31B931456B2BC00C5F621 /* GGGame.m in Sources */,
+				47ECCD261456F2DB009FC6D3 /* GGRemoteObject.m in Sources */,
+				47ECCD2A1456F5C5009FC6D3 /* GGNews.m in Sources */,
+				47ECCD361456FF5C009FC6D3 /* GGNewsListController.m in Sources */,
+				47ECCD45145729C2009FC6D3 /* GGMatchesListController.m in Sources */,
+				47ECCD49145729D1009FC6D3 /* GGReplaysListController.m in Sources */,
+				47ECCD4D14572A24009FC6D3 /* GGMatch.m in Sources */,
+				47ECCD5114572A2C009FC6D3 /* GGReplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +590,11 @@
 			isa = PBXTargetDependency;
 			target = 47D846B61452A61D0044746E /* GosuGamers */;
 			targetProxy = 47D846EB1452A61D0044746E /* PBXContainerItemProxy */;
+		};
+		47ECCD151456DF8C009FC6D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 47ECCD141456DF8C009FC6D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -316,20 +607,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		47D846CD1452A61D0044746E /* MainStoryboard_iPhone.storyboard */ = {
+		47D846CD1452A61D0044746E /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				47D846CE1452A61D0044746E /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		47D846D01452A61D0044746E /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47D846D11452A61D0044746E /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		47D846F01452A61D0044746E /* InfoPlist.strings */ = {
@@ -395,7 +678,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,7 +691,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -465,6 +752,7 @@
 				47D846FA1452A61D0044746E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47D846FB1452A61D0044746E /* Build configuration list for PBXNativeTarget "GosuGamersTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +761,7 @@
 				47D846FD1452A61D0044746E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

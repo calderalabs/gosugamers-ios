@@ -14,7 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
+    
     return YES;
 }
 							
