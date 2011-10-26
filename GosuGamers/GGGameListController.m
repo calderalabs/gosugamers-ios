@@ -3,12 +3,11 @@
 //  GosuGamers
 //
 //  Created by Eugenio Depalo on 25/10/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Eugenio Depalo. All rights reserved.
 //
 
 #import "GGGameListController.h"
 #import "GGGame.h"
-#import "GGNewsListController.h"
 
 @interface GGGameListController ()
 
@@ -17,15 +16,6 @@
 @end
 
 @implementation GGGameListController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,6 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0/255.0
+                                                                        green:100/255.0
+                                                                         blue:113/255.0
+                                                                        alpha:1];
+    
+    
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableBackground"]];
 }
 
 - (void)viewDidUnload
@@ -92,6 +90,10 @@
     return cell;
 }
 
+- (void)remoteListControllerDidSelectListAction:(GGRemoteListController *)controller {
+    [controller dismissModalViewControllerAnimated:YES];
+}
+
 - (NSArray *)controllersForGame:(GGGame *)game {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SectionsStoryboard" bundle:nil];
     
@@ -100,6 +102,7 @@
     for(NSString *section in game.sections) {
         GGRemoteListController *controller = [storyboard instantiateViewControllerWithIdentifier:
                                               [NSString stringWithFormat:@"%@Controller", [section capitalizedString]]];
+        controller.delegate = self;
         controller.game = game;
         [controllers addObject:[[UINavigationController alloc] initWithRootViewController:controller]];
     }
