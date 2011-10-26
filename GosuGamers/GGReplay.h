@@ -10,4 +10,15 @@
 
 @interface GGReplay : GGRemoteObject
 
+@property (nonatomic, copy, readonly) NSDate *date;
+@property (nonatomic, copy, readonly) NSString *game;
+@property (nonatomic, copy, readonly) NSString *playerOne;
+@property (nonatomic, copy, readonly) NSString *playerTwo;
+@property (nonatomic, copy, readonly) NSString *map;
+@property (nonatomic, copy, readonly) NSString *event;
+@property (nonatomic, copy, readonly) NSNumber *rating;
+@property (nonatomic, copy, readonly) NSURL *link;
+@property (nonatomic, copy, readonly) NSNumber *downloadCount;
+@property (nonatomic, copy, readonly) NSNumber *commentCount;
+
 @end

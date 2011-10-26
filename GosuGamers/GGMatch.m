@@ -10,8 +10,28 @@
 
 @implementation GGMatch
 
+@synthesize eta = _eta;
+@synthesize game = _game;
+@synthesize playerOne = _playerOne;
+@synthesize playerTwo = _playerTwo;
+@synthesize link = _link;
+@synthesize commentCount = _commentCount;
+@synthesize betCount = _betCount;
+
 + (NSString *)path {
     return @"matches";
+}
+
++ (void)mapAttributes:(RKObjectMapping *)mapping {
+    [super mapAttributes:mapping];
+    
+    [mapping mapKeyPath:@"eta" toAttribute:@"eta"];
+    [mapping mapKeyPath:@"game" toAttribute:@"game"];
+    [mapping mapKeyPath:@"player_one" toAttribute:@"playerOne"];
+    [mapping mapKeyPath:@"player_two" toAttribute:@"playerTwo"];
+    [mapping mapKeyPath:@"link" toAttribute:@"link"];
+    [mapping mapKeyPath:@"comment_count" toAttribute:@"commentCount"];
+    [mapping mapKeyPath:@"bet_count" toAttribute:@"betCount"];
 }
 
 @end

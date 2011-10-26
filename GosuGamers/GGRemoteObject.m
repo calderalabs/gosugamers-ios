@@ -15,7 +15,6 @@
 
 + (void)mapAttributes:(RKObjectMapping *)mapping {
     [mapping mapKeyPath:@"id" toAttribute:@"uid"];
-    [mapping mapKeyPath:@"created_at" toAttribute:@"createdAt"];
 }
 
 + (RKObjectMapping *)mapping {

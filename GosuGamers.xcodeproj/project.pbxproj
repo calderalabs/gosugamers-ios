@@ -16,6 +16,8 @@
 		474369A0145848A60071C9AD /* Matches@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4743699A145848A60071C9AD /* Matches@2x.png */; };
 		474369A1145848A60071C9AD /* Replays.png in Resources */ = {isa = PBXBuildFile; fileRef = 4743699B145848A60071C9AD /* Replays.png */; };
 		474369A2145848A60071C9AD /* Replays@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4743699C145848A60071C9AD /* Replays@2x.png */; };
+		474369A5145855270071C9AD /* GGNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A4145855270071C9AD /* GGNewsTableViewCell.m */; };
+		474369A914585C8B0071C9AD /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A814585C8B0071C9AD /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		47D25056145824300063319C /* TableBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D25055145824300063319C /* TableBackground.png */; };
 		47D846BC1452A61D0044746E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BB1452A61D0044746E /* UIKit.framework */; };
 		47D846BE1452A61D0044746E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BD1452A61D0044746E /* Foundation.framework */; };
@@ -163,6 +165,10 @@
 		4743699A145848A60071C9AD /* Matches@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matches@2x.png"; sourceTree = "<group>"; };
 		4743699B145848A60071C9AD /* Replays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Replays.png; sourceTree = "<group>"; };
 		4743699C145848A60071C9AD /* Replays@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Replays@2x.png"; sourceTree = "<group>"; };
+		474369A3145855270071C9AD /* GGNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGNewsTableViewCell.h; sourceTree = "<group>"; };
+		474369A4145855270071C9AD /* GGNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNewsTableViewCell.m; sourceTree = "<group>"; };
+		474369A714585C8B0071C9AD /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		474369A814585C8B0071C9AD /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		47D25055145824300063319C /* TableBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBackground.png; sourceTree = "<group>"; };
 		47D846B71452A61D0044746E /* GosuGamers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GosuGamers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D846BB1452A61D0044746E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -239,11 +245,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		474369A614585C820071C9AD /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				474369A714585C8B0071C9AD /* NSDate+Helper.h */,
+				474369A814585C8B0071C9AD /* NSDate+Helper.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
 		47D2505714582E1F0063319C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				474369801458342B0071C9AD /* GGActivityLabel.h */,
 				474369811458342B0071C9AD /* GGActivityLabel.m */,
+				474369A3145855270071C9AD /* GGNewsTableViewCell.h */,
+				474369A4145855270071C9AD /* GGNewsTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -286,6 +303,7 @@
 		47D846C11452A61D0044746E /* GosuGamers */ = {
 			isa = PBXGroup;
 			children = (
+				474369A614585C820071C9AD /* Additions */,
 				47D2505714582E1F0063319C /* Views */,
 				47ECCD3E14570E57009FC6D3 /* Storyboards */,
 				47ECCD3D14570E48009FC6D3 /* Controllers */,
@@ -614,6 +632,8 @@
 				47ECCD4C14572A24009FC6D3 /* GGMatch.m in Sources */,
 				47ECCD5014572A2C009FC6D3 /* GGReplay.m in Sources */,
 				474369821458342B0071C9AD /* GGActivityLabel.m in Sources */,
+				474369A5145855270071C9AD /* GGNewsTableViewCell.m in Sources */,
+				474369A914585C8B0071C9AD /* NSDate+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

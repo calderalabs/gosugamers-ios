@@ -10,14 +10,16 @@
 
 @implementation GGNews
 
-@synthesize game;
-@synthesize title;
-@synthesize link;
-@synthesize commentCount;
+@synthesize game = _game;
+@synthesize title = _title;
+@synthesize link = _link;
+@synthesize commentCount = _commentCount;
+@synthesize createdAt = _createdAt;
 
 + (void)mapAttributes:(RKObjectMapping *)mapping {
     [super mapAttributes:mapping];
     
+    [mapping mapKeyPath:@"created_at" toAttribute:@"createdAt"];
     [mapping mapKeyPath:@"game" toAttribute:@"game"];
     [mapping mapKeyPath:@"title" toAttribute:@"title"];
     [mapping mapKeyPath:@"link" toAttribute:@"link"];

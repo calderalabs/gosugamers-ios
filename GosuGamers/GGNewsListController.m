@@ -8,6 +8,8 @@
 
 #import "GGNewsListController.h"
 #import "GGNews.h"
+#import "GGNewsTableViewCell.h"
+#import "NSDate+Helper.h"
 
 @implementation GGNewsListController
 
@@ -28,8 +30,11 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
+    GGNewsTableViewCell *newsCell = (GGNewsTableViewCell *)cell;
     GGNews *news = object;
-    cell.textLabel.text = news.title;
+    newsCell.titleLabel.text = news.title;
+    newsCell.topDetailLabel.text = [NSString stringWithFormat:@"%@ comments", news.commentCount];
+    newsCell.bottomDetailLabel.text = [NSDate stringForDisplayFromDate:news.createdAt];
 }
 
 @end
