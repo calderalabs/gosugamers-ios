@@ -21,6 +21,7 @@
 
 @interface GGRemoteListController : GGTableViewController <RKObjectLoaderDelegate, UIActionSheetDelegate> {
     NSMutableArray *_objects;
+    RKObjectLoader *_loader;
 }
 
 + (id)objectClass;

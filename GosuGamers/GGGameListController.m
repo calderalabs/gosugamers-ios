@@ -69,6 +69,7 @@
         
         UITabBarController *tabBarController = segue.destinationViewController;
         tabBarController.viewControllers = [self controllersForGame:game];
+        [self.tableView deselectRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0] animated:YES];
     }
     else if([segue.identifier isEqualToString:@"ManageChannels"]) {
         GGChannelsController *controller = (GGChannelsController *)((UINavigationController *)segue.destinationViewController).topViewController;

@@ -146,20 +146,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select a Game" id="WNE-zv-8kb">
-                        <barButtonItem key="rightBarButtonItem" image="Feed.png" id="BcQ-5b-zoh">
+                        <barButtonItem key="rightBarButtonItem" image="Settings.png" id="BcQ-5b-zoh">
                             <connections>
                                 <action selector="manageChannels:" destination="n5G-gg-GM5" id="8Rq-lg-mWv"/>
                                 <segue destination="KzH-DZ-qwy" kind="modal" identifier="ManageChannels" id="CV4-Ei-Su1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nfB-UE-cNc" id="hfK-XG-COn"/>
+                        <outlet property="view" destination="nfB-UE-cNc" id="1yI-Vc-iGD"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="474" y="211"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Feed.png" width="26" height="26"/>
+        <image name="Settings.png" width="19" height="19"/>
     </resources>
     <classes>
         <class className="GGChannelsController" superclassName="GGTableViewController">
