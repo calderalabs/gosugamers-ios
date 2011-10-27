@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GGGame.h"
+#import "GGTableViewController.h"
 
 @class GGRemoteListController;
 
@@ -18,21 +19,15 @@
 
 @end
 
-@interface GGRemoteListController : UIViewController
-
-<RKObjectLoaderDelegate,
-UITableViewDelegate,
-UITableViewDataSource>
-
-{
-    UIView *_overlayView;
+@interface GGRemoteListController : GGTableViewController <RKObjectLoaderDelegate, UIActionSheetDelegate> {
+    NSMutableArray *_objects;
 }
 
 + (id)objectClass;
 
 @property (nonatomic, strong) GGGame *game;
+@property (nonatomic) NSUInteger page;
 @property (nonatomic, strong, readonly) NSArray *objects;
-@property (nonatomic, strong, readonly) IBOutlet UITableView *tableView;
 @property (nonatomic, readonly, copy) NSString *emptyMessage;
 @property (nonatomic, readonly, copy) NSString *errorMessage;
 @property (nonatomic, weak) id<GGRemoteListControllerDelegate> delegate;

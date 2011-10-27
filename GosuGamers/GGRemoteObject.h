@@ -11,6 +11,8 @@
 @interface GGRemoteObject : NSObject
 
 @property (nonatomic, copy, readonly) NSNumber *uid;
+@property (nonatomic, copy, readonly) NSURL *link;
+@property (nonatomic, copy, readonly) NSString *game;
 
 + (void)mapAttributes:(RKObjectMapping *)mapping;
 + (RKObjectMapping *)mapping;

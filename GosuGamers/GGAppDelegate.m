@@ -7,6 +7,7 @@
 //
 
 #import "GGAppDelegate.h"
+#import "Parse/Parse.h"
 
 @implementation GGAppDelegate
 
@@ -14,15 +15,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
+    /* Parse Configuration */
     
+    [Parse setApplicationId:@"1LRW5L2C4f1bBe9glvo38jZ8Sp3k6zVlzfSTUjky" clientKey:@"NxXxGaLu5qqsJ8Y9eM4n7jOow1pXwxkKnGQZfjH3"];
+    
+    /* RestKit configuration */
+    
+    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+01:00'"];
     [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    
     [RKObjectMapping addDefaultDateFormatter:formatter]; 
     
+    /* Appearance configuration */
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0/255.0
+                                                                        green:100/255.0
+                                                                         blue:113/255.0
+                                                                        alpha:1]];
+
     return YES;
 }
 

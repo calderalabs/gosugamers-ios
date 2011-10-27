@@ -16,7 +16,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sga-FQ-ur4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="86" id="CDN-VH-nCM" customClass="GGNewsTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="86"/>
@@ -79,7 +79,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Te-po-gTZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="86" id="U3z-LI-hTR" customClass="GGMatchTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="86"/>
@@ -165,7 +165,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" id="DUE-Ed-aep">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="151" id="jEe-kY-tRV" customClass="GGReplayTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="151"/>
@@ -288,11 +288,8 @@
                 <relationship kind="outlet" name="topDetailLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="GGRemoteListController" superclassName="UIViewController">
+        <class className="GGRemoteListController" superclassName="GGTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGRemoteListController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
         </class>
         <class className="GGReplayTableViewCell" superclassName="GGMatchTableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGReplayTableViewCell.h"/>
@@ -304,6 +301,15 @@
         </class>
         <class className="GGReplaysListController" superclassName="GGRemoteListController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGReplaysListController.h"/>
+        </class>
+        <class className="GGTableViewController" superclassName="GGViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="GGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGViewController.h"/>
         </class>
         <class className="SCRRatingView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SCRRatingView.h"/>

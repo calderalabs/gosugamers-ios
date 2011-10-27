@@ -11,9 +11,13 @@
 @implementation GGRemoteObject
 
 @synthesize uid = _uid;
+@synthesize link = _link;
+@synthesize game = _game;
 
 + (void)mapAttributes:(RKObjectMapping *)mapping {
     [mapping mapKeyPath:@"id" toAttribute:@"uid"];
+    [mapping mapKeyPath:@"game" toAttribute:@"game"];
+    [mapping mapKeyPath:@"link" toAttribute:@"link"];
 }
 
 + (RKObjectMapping *)mapping {

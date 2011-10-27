@@ -11,9 +11,7 @@
 @interface GGNews : GGRemoteObject
 
 @property (nonatomic, copy, readonly) NSDate *createdAt;
-@property (nonatomic, copy, readonly) NSString *game;
 @property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, copy, readonly) NSURL *link;
 @property (nonatomic, copy, readonly) NSNumber *commentCount;
 
 @end

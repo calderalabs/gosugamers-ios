@@ -17,58 +17,6 @@
 
 @implementation GGGameListController
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0/255.0
-                                                                        green:100/255.0
-                                                                         blue:113/255.0
-                                                                        alpha:1];
-    
-    
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableBackground"]];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -91,6 +39,10 @@
 }
 
 - (void)remoteListControllerDidSelectListAction:(GGRemoteListController *)controller {
+    [controller dismissModalViewControllerAnimated:YES];
+}
+
+- (void)channelsControllerDidCancel:(GGChannelsController *)controller {
     [controller dismissModalViewControllerAnimated:YES];
 }
 
@@ -117,6 +69,10 @@
         
         UITabBarController *tabBarController = segue.destinationViewController;
         tabBarController.viewControllers = [self controllersForGame:game];
+    }
+    else if([segue.identifier isEqualToString:@"ManageChannels"]) {
+        GGChannelsController *controller = (GGChannelsController *)((UINavigationController *)segue.destinationViewController).topViewController;
+        controller.delegate = self;
     }
 }
 

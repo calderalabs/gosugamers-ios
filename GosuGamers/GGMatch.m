@@ -26,10 +26,8 @@
     [super mapAttributes:mapping];
     
     [mapping mapKeyPath:@"eta" toAttribute:@"eta"];
-    [mapping mapKeyPath:@"game" toAttribute:@"game"];
     [mapping mapKeyPath:@"player_one" toAttribute:@"playerOne"];
     [mapping mapKeyPath:@"player_two" toAttribute:@"playerTwo"];
-    [mapping mapKeyPath:@"link" toAttribute:@"link"];
     [mapping mapKeyPath:@"comment_count" toAttribute:@"commentCount"];
     [mapping mapKeyPath:@"bet_count" toAttribute:@"betCount"];
 }

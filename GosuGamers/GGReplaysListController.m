@@ -29,8 +29,8 @@
     return self;
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
-    GGReplay *replay = object;
+- (void)configureCell:(UITableViewCell *)cell withObject:(GGRemoteObject *)object {
+    GGReplay *replay = (GGReplay *)object;
     GGReplayTableViewCell *replayCell = (GGReplayTableViewCell *)cell;
     replayCell.topLeftDetailLabel.text = [NSString stringWithFormat:@"Event: %@", replay.event];
     replayCell.topRightDetailLabel.text = [NSString stringWithFormat:@"Map: %@", replay.map];

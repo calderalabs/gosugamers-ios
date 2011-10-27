@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GGRemoteListController.h"
+#import "GGChannelsController.h"
+#import "GGTableViewController.h"
 
-@interface GGGameListController : UITableViewController <GGRemoteListControllerDelegate>
+@interface GGGameListController : GGTableViewController <GGRemoteListControllerDelegate, GGChannelsControllerDelegate>
 
 @end

@@ -29,8 +29,8 @@
     return self;
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
-    GGMatch *match = object;
+- (void)configureCell:(UITableViewCell *)cell withObject:(GGRemoteObject *)object {
+    GGMatch *match = (GGMatch *)object;
     GGMatchTableViewCell *matchCell = (GGMatchTableViewCell *)cell;
     
     matchCell.playerOneLabel.text = match.playerOne;

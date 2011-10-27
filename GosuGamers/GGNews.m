@@ -20,9 +20,7 @@
     [super mapAttributes:mapping];
     
     [mapping mapKeyPath:@"created_at" toAttribute:@"createdAt"];
-    [mapping mapKeyPath:@"game" toAttribute:@"game"];
     [mapping mapKeyPath:@"title" toAttribute:@"title"];
-    [mapping mapKeyPath:@"link" toAttribute:@"link"];
     [mapping mapKeyPath:@"comment_count" toAttribute:@"commentCount"];
 }
 

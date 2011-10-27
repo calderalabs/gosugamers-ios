@@ -29,12 +29,10 @@
     [super mapAttributes:mapping];
     
     [mapping mapKeyPath:@"date" toAttribute:@"date"];
-    [mapping mapKeyPath:@"game" toAttribute:@"game"];
     [mapping mapKeyPath:@"player_one" toAttribute:@"playerOne"];
     [mapping mapKeyPath:@"player_two" toAttribute:@"playerTwo"];
     [mapping mapKeyPath:@"map" toAttribute:@"map"];
     [mapping mapKeyPath:@"event" toAttribute:@"event"];
-    [mapping mapKeyPath:@"link" toAttribute:@"link"];
     [mapping mapKeyPath:@"rating" toAttribute:@"rating"];
     [mapping mapKeyPath:@"comment_count" toAttribute:@"commentCount"];
     [mapping mapKeyPath:@"download_count" toAttribute:@"downloadCount"];

@@ -7,24 +7,28 @@
 //
 
 #import "GGRemoteListController.h"
-#import "GGActivityLabel.h"
+#import "GGActivityTableViewCell.h"
+#import "GGRemoteObject.h"
 
 @interface GGRemoteListController ()
 
-- (void)loadObjects;
-- (void)configureCell:(UITableViewCell *)cell withObject:(id)object;
-- (void)showMessage:(NSString *)message;
-- (void)showOverlayView:(UIView *)view;
-- (void)hideOverlayView;
+- (void)loadObjectsAddingResults:(BOOL)addingResults;
+- (void)configureCell:(UITableViewCell *)cell withObject:(GGRemoteObject *)object;
+
+@property (nonatomic, strong, readonly) GGActivityTableViewCell *moreCell;
 
 @end
 
 @implementation GGRemoteListController
 
 @synthesize game = _game;
-@synthesize objects = _objects;
-@synthesize tableView = _tableView;
+@synthesize page = _page;
 @synthesize delegate = _delegate;
+@synthesize moreCell = _moreCell;
+
+- (NSArray *)objects {
+    return [NSArray arrayWithArray:_objects];
+}
 
 + (id)objectClass {
     return nil;
@@ -38,6 +42,9 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                                target:self
                                                                                                action:@selector(refresh)];
+        
+        _objects = [NSMutableArray array];
+        _page = 1;
     }
     
     return self;
@@ -52,7 +59,7 @@
 }
 
 - (void)refresh {
-    [self loadObjects];
+    [self loadObjectsAddingResults:NO];
 }
 
 - (void)cancel {
@@ -60,95 +67,56 @@
         [_delegate remoteListControllerDidSelectListAction:self];
 }
 
-- (void)loadObjects {
-    GGActivityLabel *loadingView = [[GGActivityLabel alloc] initWithStyle:UIActivityIndicatorViewStyleGray];
-    loadingView.label.text = @"Loading...";
-    [loadingView sizeToFit];
-    loadingView.autoresizingMask =
-    UIViewAutoresizingFlexibleRightMargin |
-    UIViewAutoresizingFlexibleLeftMargin |
-    UIViewAutoresizingFlexibleTopMargin |
-    UIViewAutoresizingFlexibleBottomMargin;
-    loadingView.frame = CGRectMake(floor((self.view.frame.size.width - loadingView.frame.size.width) / 2),
-                                   floor((self.view.frame.size.height - loadingView.frame.size.height) / 2),
-                                   loadingView.frame.size.width,
-                                   loadingView.frame.size.height);
-    
-    [self showOverlayView:loadingView];
+- (void)loadObjectsAddingResults:(BOOL)addingResults {
+    if(addingResults) {
+        _moreCell.userInteractionEnabled = NO;
+        [_moreCell startAnimating];
+        _page++;
+    }
+    else {
+        [_objects removeAllObjects];
+        [self.tableView reloadData];
+        [self showActivityWithMessage:@"Loading..."];
+        _page = 1;
+    }
     
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[[[self.class objectClass] path]
-                                                                appendQueryParams:[NSDictionary dictionaryWithObject:_game.uid forKey:@"game"]]
+                                                                appendQueryParams:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                   _game.uid, @"game",
+                                                                                   [NSNumber numberWithUnsignedInteger:_page], @"page",
+                                                                                   nil]]
                                                  objectMapping:[[self.class objectClass] mapping]
                                                       delegate:self];
 }
 
-- (void)showOverlayView:(UIView *)view {
-    [_overlayView removeFromSuperview];
-    _overlayView = view;
-    _overlayView.alpha = 0.0;
-    [self.view addSubview:_overlayView];
-    [UIView animateWithDuration:0.2 animations:^{
-        _overlayView.alpha = 1.0;
-        _tableView.alpha = 0.0;
-    }];
-}
-
-- (void)hideOverlayView {
-    [UIView animateWithDuration:0.2
-                     animations:^{
-                         _overlayView.alpha = 0.0;
-                         _tableView.alpha = 1.0;
-                     }
-                     completion:^(BOOL finished){ [_overlayView removeFromSuperview]; }];
-}
-
-- (void)showMessage:(NSString *)message {
-    UILabel *messageLabel = [[UILabel alloc] init];
-    messageLabel.backgroundColor = [UIColor clearColor];
-    messageLabel.font = [UIFont boldSystemFontOfSize:14.0];
-    messageLabel.numberOfLines = 0;
-    messageLabel.textAlignment = UITextAlignmentCenter;
-    messageLabel.text = message;
-    CGSize labelSize = [messageLabel.text sizeWithFont:messageLabel.font
-                                     constrainedToSize:CGSizeMake(self.view.frame.size.width - 20, CGFLOAT_MAX)];
-    
-    messageLabel.frame = CGRectMake(floor((self.view.frame.size.width - labelSize.width) / 2),
-                                    floor((self.view.frame.size.height - labelSize.height) / 2),
-                                    labelSize.width,
-                                    labelSize.height);
-    messageLabel.autoresizingMask =
-    UIViewAutoresizingFlexibleRightMargin |
-    UIViewAutoresizingFlexibleLeftMargin |
-    UIViewAutoresizingFlexibleTopMargin |
-    UIViewAutoresizingFlexibleBottomMargin;
-    
-    [self showOverlayView:messageLabel];
-}
-
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
-    _objects = objects;
-    [_tableView reloadData];
+    NSMutableArray *indexPaths = [NSMutableArray array];
     
-    NSString *emptyMessage = [self emptyMessage];
-    
-    if(_objects.count == 0 && emptyMessage)
-        [self showMessage:emptyMessage];
-    else
+    for(NSInteger i = 0; i < objects.count; i++)
+        [indexPaths addObject:[NSIndexPath indexPathForRow:_objects.count + i inSection:0]];
+
+    if(_objects.count == 0) {
+        [indexPaths addObject:[NSIndexPath indexPathForRow:objects.count inSection:0]];
         [self hideOverlayView];
+    }
+    else {
+        [_moreCell stopAnimating];
+        _moreCell.userInteractionEnabled = YES;
+    }
+    
+    [_objects addObjectsFromArray:objects];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    if(_objects.count == 0)
+        [self showMessage:[self emptyMessage]];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error {
-    [_tableView reloadData];
+    [_objects removeAllObjects];
+    [self.tableView reloadData];
     
     [self showMessage:[self errorMessage]];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -157,43 +125,10 @@
     self.navigationController.navigationBar.tintColor = _game.color;
     self.tabBarController.tabBar.tintColor = _game.color;
     
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    [self loadObjects];
+    [self loadObjectsAddingResults:NO];
 }
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -202,17 +137,58 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _objects.count > 0 ? _objects.count + 1 : 0;
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
+- (void)configureCell:(UITableViewCell *)cell withObject:(GGRemoteObject *)object {
     
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    GGRemoteObject *object = [_objects objectAtIndex:actionSheet.tag];
+    
+    if(buttonIndex == actionSheet.firstOtherButtonIndex)
+        [[UIApplication sharedApplication] openURL:object.link];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row == _objects.count) {
+        [self loadObjectsAddingResults:YES];
+    }
+    else {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                             destructiveButtonTitle:nil
+                                                  otherButtonTitles:@"Open in Safari", nil];
+        
+        sheet.tag = indexPath.row;
+        
+        [sheet showInView:tableView];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
-    [self configureCell:cell withObject:[_objects objectAtIndex:indexPath.row]];
+    
+    UITableViewCell *cell;
+    
+    if(indexPath.row == _objects.count) {
+        _moreCell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
+        
+        if(!_moreCell)
+            _moreCell = [[GGActivityTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MoreCell"];
+        
+        _moreCell.titleLabel.text = @"Load more...";
+        
+        cell = _moreCell;
+    }
+    else {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
+        [self configureCell:cell withObject:[_objects objectAtIndex:indexPath.row]];
+    }
     
     return cell;
 }

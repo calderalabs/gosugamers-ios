@@ -29,9 +29,9 @@
     return self;
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
+- (void)configureCell:(UITableViewCell *)cell withObject:(GGRemoteObject *)object {
     GGNewsTableViewCell *newsCell = (GGNewsTableViewCell *)cell;
-    GGNews *news = object;
+    GGNews *news = (GGNews *)object;
     newsCell.titleLabel.text = news.title;
     newsCell.topDetailLabel.text = [NSString stringWithFormat:@"%@ comments", news.commentCount];
     newsCell.dateLabel.text = [NSDate stringForDisplayFromDate:news.createdAt];
