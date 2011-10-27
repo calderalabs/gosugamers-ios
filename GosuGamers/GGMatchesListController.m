@@ -8,6 +8,8 @@
 
 #import "GGMatchesListController.h"
 #import "GGMatch.h"
+#import "GGMatchTableViewCell.h"
+#import "NSDate+Helper.h"
 
 @implementation GGMatchesListController
 
@@ -29,7 +31,13 @@
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
     GGMatch *match = object;
-    cell.textLabel.text = [match.uid description];
+    GGMatchTableViewCell *matchCell = (GGMatchTableViewCell *)cell;
+    
+    matchCell.playerOneLabel.text = match.playerOne;
+    matchCell.playerTwoLabel.text = match.playerTwo;
+    matchCell.dateLabel.text = match.eta;
+    matchCell.bottomLeftDetailLabel.text = [NSString stringWithFormat:@"%@ comments", match.commentCount];
+    matchCell.bottomRightDetailLabel.text = [NSString stringWithFormat:@"%@ bets", match.betCount];
 }
 
 @end

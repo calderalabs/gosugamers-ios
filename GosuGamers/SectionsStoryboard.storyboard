@@ -13,34 +13,34 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sga-FQ-ur4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sga-FQ-ur4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="95" id="CDN-VH-nCM" customClass="GGNewsTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="95"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="86" id="CDN-VH-nCM" customClass="GGNewsTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="vXY-ch-swc">
-                                                    <rect key="frame" x="20" y="20" width="197" height="54"/>
+                                                    <rect key="frame" x="20" y="20" width="197" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Comments" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="3jW-qE-8Vn">
-                                                    <rect key="frame" x="225" y="22" width="75" height="21"/>
+                                                    <rect key="frame" x="225" y="18" width="75" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="HAm-hQ-QRy">
-                                                    <rect key="frame" x="225" y="51" width="75" height="21"/>
+                                                    <rect key="frame" x="225" y="47" width="75" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,7 +50,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="bottomDetailLabel" destination="HAm-hQ-QRy" id="h4m-g4-QBU"/>
+                                            <outlet property="dateLabel" destination="HAm-hQ-QRy" id="9SU-xP-ekn"/>
                                             <outlet property="titleLabel" destination="vXY-ch-swc" id="k5k-V3-pbf"/>
                                             <outlet property="topDetailLabel" destination="3jW-qE-8Vn" id="NyK-ES-RG2"/>
                                         </connections>
@@ -76,19 +76,70 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Te-po-gTZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Te-po-gTZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" id="U3z-LI-hTR">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="86" id="U3z-LI-hTR" customClass="GGMatchTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Player 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="Kpr-BG-TJG">
+                                                    <rect key="frame" x="20" y="20" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Player 2" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="XIc-rX-UR9">
+                                                    <rect key="frame" x="189" y="20" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="vs" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="stG-sl-beK">
+                                                    <rect key="frame" x="139" y="20" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eta" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Hwb-OF-pOG">
+                                                    <rect key="frame" x="113" y="49" width="95" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Comments" lineBreakMode="tailTruncation" minimumFontSize="10" id="2fe-kJ-KfB">
+                                                    <rect key="frame" x="20" y="49" width="85" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bets" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="DOr-KX-KaY">
+                                                    <rect key="frame" x="189" y="49" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="bottomLeftDetailLabel" destination="DOr-KX-KaY" id="5hS-ME-dt6"/>
+                                            <outlet property="bottomRightDetailLabel" destination="2fe-kJ-KfB" id="R72-1g-jaB"/>
+                                            <outlet property="dateLabel" destination="Hwb-OF-pOG" id="qQM-U6-PUy"/>
+                                            <outlet property="playerOneLabel" destination="Kpr-BG-TJG" id="4Df-13-IGA"/>
+                                            <outlet property="playerTwoLabel" destination="XIc-rX-UR9" id="rMc-71-qBg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -111,19 +162,92 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DUE-Ed-aep">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="151" sectionHeaderHeight="22" sectionFooterHeight="22" id="DUE-Ed-aep">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" id="wcx-81-Xfc">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectCell" rowHeight="151" id="jEe-kY-tRV" customClass="GGReplayTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Player 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="Gpc-FO-8dH">
+                                                    <rect key="frame" x="20" y="49" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Player 2" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="Mfz-k0-ALg">
+                                                    <rect key="frame" x="189" y="49" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="vs" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZMA-FB-P2Y">
+                                                    <rect key="frame" x="139" y="49" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="0ya-PE-4SP">
+                                                    <rect key="frame" x="113" y="78" width="95" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Comments" lineBreakMode="tailTruncation" minimumFontSize="10" id="bEk-D0-wAO">
+                                                    <rect key="frame" x="20" y="78" width="85" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Downloads" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="i4c-pF-qwE">
+                                                    <rect key="frame" x="189" y="78" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Event" lineBreakMode="tailTruncation" minimumFontSize="10" id="2hF-8K-cgb">
+                                                    <rect key="frame" x="20" y="20" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Map" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="lX2-4X-M2v">
+                                                    <rect key="frame" x="189" y="20" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="UvL-QM-d5m" customClass="SCRRatingView">
+                                                    <rect key="frame" x="67" y="107" width="186" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="bottomLeftDetailLabel" destination="bEk-D0-wAO" id="T6s-yV-DFo"/>
+                                            <outlet property="bottomRightDetailLabel" destination="i4c-pF-qwE" id="eIW-QY-RJg"/>
+                                            <outlet property="dateLabel" destination="0ya-PE-4SP" id="1rl-Ou-ePT"/>
+                                            <outlet property="playerOneLabel" destination="Gpc-FO-8dH" id="Uy0-pL-ef6"/>
+                                            <outlet property="playerTwoLabel" destination="Mfz-k0-ALg" id="aRg-6d-nyw"/>
+                                            <outlet property="ratingView" destination="UvL-QM-d5m" id="0Wt-Ek-Nqu"/>
+                                            <outlet property="topLeftDetailLabel" destination="2hF-8K-cgb" id="9cw-8s-6np"/>
+                                            <outlet property="topRightDetailLabel" destination="lX2-4X-M2v" id="ePu-w5-15y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -140,6 +264,16 @@
         </scene>
     </scenes>
     <classes>
+        <class className="GGMatchTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGMatchTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bottomLeftDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bottomRightDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playerOneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playerTwoLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="GGMatchesListController" superclassName="GGRemoteListController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGMatchesListController.h"/>
         </class>
@@ -149,7 +283,7 @@
         <class className="GGNewsTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGNewsTableViewCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="bottomDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="topDetailLabel" candidateClass="UILabel"/>
             </relationships>
@@ -160,8 +294,22 @@
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
+        <class className="GGReplayTableViewCell" superclassName="GGMatchTableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GGReplayTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ratingView" candidateClass="SCRRatingView"/>
+                <relationship kind="outlet" name="topLeftDetailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="topRightDetailLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="GGReplaysListController" superclassName="GGRemoteListController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGReplaysListController.h"/>
+        </class>
+        <class className="SCRRatingView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCRRatingView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

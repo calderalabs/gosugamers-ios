@@ -34,6 +34,19 @@
             </objects>
             <point key="canvasLocation" x="43" y="211"/>
         </scene>
+        <scene sceneID="nmF-qX-1Zw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CsW-Av-uzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="AJC-8S-vh7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCe-g0-Mh2">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="474" y="-357"/>
+        </scene>
         <scene sceneID="PR8-DF-kOn">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4Y-oY-r2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,7 +75,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="4" kind="modal" modalTransitionStyle="crossDissolve" id="4tX-EH-yuA"/>
+                                    <segue destination="4" kind="modal" identifier="SelectGame" modalTransitionStyle="crossDissolve" id="4tX-EH-yuA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,12 +85,22 @@
                             <outlet property="delegate" destination="n5G-gg-GM5" id="sSb-sB-m1O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a Game" id="WNE-zv-8kb"/>
+                    <navigationItem key="navigationItem" title="Select a Game" id="WNE-zv-8kb">
+                        <barButtonItem key="rightBarButtonItem" image="Feed.png" id="BcQ-5b-zoh">
+                            <connections>
+                                <action selector="manageChannels:" destination="n5G-gg-GM5" id="8Rq-lg-mWv"/>
+                                <segue destination="AJC-8S-vh7" kind="modal" identifier="ManageChannels" id="9lJ-jB-jlV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="474" y="211"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Feed.png" width="26" height="26"/>
+    </resources>
     <classes>
         <class className="GGGameListController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGGameListController.h"/>

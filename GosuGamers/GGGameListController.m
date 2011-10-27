@@ -111,11 +111,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSUInteger row = [sender tag];
-    GGGame *game = [[GGGame all] objectAtIndex:row];
-    
-    UITabBarController *tabBarController = segue.destinationViewController;
-    tabBarController.viewControllers = [self controllersForGame:game];
+    if([segue.identifier isEqualToString:@"SelectGame"]) {
+        NSUInteger row = [sender tag];
+        GGGame *game = [[GGGame all] objectAtIndex:row];
+        
+        UITabBarController *tabBarController = segue.destinationViewController;
+        tabBarController.viewControllers = [self controllersForGame:game];
+    }
 }
 
 @end

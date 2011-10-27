@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong, readonly) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong, readonly) IBOutlet UILabel *topDetailLabel;
-@property (nonatomic, strong, readonly) IBOutlet UILabel *bottomDetailLabel;
+@property (nonatomic, strong, readonly) IBOutlet UILabel *dateLabel;
 
 @end

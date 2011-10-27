@@ -12,6 +12,6 @@
 
 @synthesize titleLabel = _titleLabel;
 @synthesize topDetailLabel = _topDetailLabel;
-@synthesize bottomDetailLabel = _bottomDetailLabel;
+@synthesize dateLabel = _dateLabel;
 
 @end

@@ -34,7 +34,7 @@
     GGNews *news = object;
     newsCell.titleLabel.text = news.title;
     newsCell.topDetailLabel.text = [NSString stringWithFormat:@"%@ comments", news.commentCount];
-    newsCell.bottomDetailLabel.text = [NSDate stringForDisplayFromDate:news.createdAt];
+    newsCell.dateLabel.text = [NSDate stringForDisplayFromDate:news.createdAt];
 }
 
 @end

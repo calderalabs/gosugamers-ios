@@ -8,6 +8,8 @@
 
 #import "GGReplaysListController.h"
 #import "GGReplay.h"
+#import "NSDate+Helper.h"
+#import "GGReplayTableViewCell.h"
 
 @implementation GGReplaysListController
 
@@ -29,7 +31,19 @@
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
     GGReplay *replay = object;
-    cell.textLabel.text = [replay.uid description];
+    GGReplayTableViewCell *replayCell = (GGReplayTableViewCell *)cell;
+    replayCell.topLeftDetailLabel.text = [NSString stringWithFormat:@"Event: %@", replay.event];
+    replayCell.topRightDetailLabel.text = [NSString stringWithFormat:@"Map: %@", replay.map];
+    replayCell.playerOneLabel.text = replay.playerOne;
+    replayCell.playerTwoLabel.text = replay.playerTwo;
+    replayCell.dateLabel.text = [NSDate stringForDisplayFromDate:replay.date];
+    replayCell.bottomRightDetailLabel.text = [NSString stringWithFormat:@"%@ downloads", replay.downloadCount];
+    replayCell.bottomLeftDetailLabel.text = [NSString stringWithFormat:@"%@ comments", replay.commentCount];
+    replayCell.ratingView.rating = [replay.rating floatValue] / 2;
+    replayCell.ratingView.userInteractionEnabled = NO;
+    [replayCell.ratingView setStarImage:[UIImage imageNamed:@"StarNonSelected"] forState:kSCRatingViewNonSelected];
+	[replayCell.ratingView setStarImage:[UIImage imageNamed:@"StarSelected"] forState:kSCRatingViewSelected];
+	[replayCell.ratingView setStarImage:[UIImage imageNamed:@"StarHalfSelected"] forState:kSCRatingViewHalfSelected];
 }
 
 @end

@@ -18,7 +18,15 @@
 		474369A2145848A60071C9AD /* Replays@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4743699C145848A60071C9AD /* Replays@2x.png */; };
 		474369A5145855270071C9AD /* GGNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A4145855270071C9AD /* GGNewsTableViewCell.m */; };
 		474369A914585C8B0071C9AD /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A814585C8B0071C9AD /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47CF55AB14588F5300B5B6AC /* GGMatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CF55AA14588F5300B5B6AC /* GGMatchTableViewCell.m */; };
+		47CF55AE14588F6100B5B6AC /* GGReplayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CF55AD14588F6100B5B6AC /* GGReplayTableViewCell.m */; };
 		47D25056145824300063319C /* TableBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D25055145824300063319C /* TableBackground.png */; };
+		47D662C414594D1E00B3AB29 /* SCRRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D662C214594D1E00B3AB29 /* SCRRatingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D662CD145950FF00B3AB29 /* StarHalfSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D662CA145950FF00B3AB29 /* StarHalfSelected.png */; };
+		47D662CE145950FF00B3AB29 /* StarNonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D662CB145950FF00B3AB29 /* StarNonSelected.png */; };
+		47D662CF145950FF00B3AB29 /* StarSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D662CC145950FF00B3AB29 /* StarSelected.png */; };
+		47D662DA1459575E00B3AB29 /* Feed.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D662D81459575E00B3AB29 /* Feed.png */; };
+		47D662DB1459575E00B3AB29 /* Feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D662D91459575E00B3AB29 /* Feed@2x.png */; };
 		47D846BC1452A61D0044746E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BB1452A61D0044746E /* UIKit.framework */; };
 		47D846BE1452A61D0044746E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BD1452A61D0044746E /* Foundation.framework */; };
 		47D846C01452A61D0044746E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D846BF1452A61D0044746E /* CoreGraphics.framework */; };
@@ -169,7 +177,19 @@
 		474369A4145855270071C9AD /* GGNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNewsTableViewCell.m; sourceTree = "<group>"; };
 		474369A714585C8B0071C9AD /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		474369A814585C8B0071C9AD /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		47CF55A914588F5300B5B6AC /* GGMatchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMatchTableViewCell.h; sourceTree = "<group>"; };
+		47CF55AA14588F5300B5B6AC /* GGMatchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMatchTableViewCell.m; sourceTree = "<group>"; };
+		47CF55AC14588F6100B5B6AC /* GGReplayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGReplayTableViewCell.h; sourceTree = "<group>"; };
+		47CF55AD14588F6100B5B6AC /* GGReplayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGReplayTableViewCell.m; sourceTree = "<group>"; };
 		47D25055145824300063319C /* TableBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBackground.png; sourceTree = "<group>"; };
+		47D662C214594D1E00B3AB29 /* SCRRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRRatingView.m; sourceTree = "<group>"; };
+		47D662C314594D1E00B3AB29 /* SCRRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRRatingView.h; sourceTree = "<group>"; };
+		47D662C514594E6E00B3AB29 /* SCRMemoryManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRMemoryManagement.h; sourceTree = "<group>"; };
+		47D662CA145950FF00B3AB29 /* StarHalfSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarHalfSelected.png; sourceTree = "<group>"; };
+		47D662CB145950FF00B3AB29 /* StarNonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarNonSelected.png; sourceTree = "<group>"; };
+		47D662CC145950FF00B3AB29 /* StarSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarSelected.png; sourceTree = "<group>"; };
+		47D662D81459575E00B3AB29 /* Feed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Feed.png; sourceTree = "<group>"; };
+		47D662D91459575E00B3AB29 /* Feed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed@2x.png"; sourceTree = "<group>"; };
 		47D846B71452A61D0044746E /* GosuGamers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GosuGamers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D846BB1452A61D0044746E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		47D846BD1452A61D0044746E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -257,10 +277,17 @@
 		47D2505714582E1F0063319C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47D662C514594E6E00B3AB29 /* SCRMemoryManagement.h */,
+				47D662C214594D1E00B3AB29 /* SCRRatingView.m */,
+				47D662C314594D1E00B3AB29 /* SCRRatingView.h */,
 				474369801458342B0071C9AD /* GGActivityLabel.h */,
 				474369811458342B0071C9AD /* GGActivityLabel.m */,
 				474369A3145855270071C9AD /* GGNewsTableViewCell.h */,
 				474369A4145855270071C9AD /* GGNewsTableViewCell.m */,
+				47CF55A914588F5300B5B6AC /* GGMatchTableViewCell.h */,
+				47CF55AA14588F5300B5B6AC /* GGMatchTableViewCell.m */,
+				47CF55AC14588F6100B5B6AC /* GGReplayTableViewCell.h */,
+				47CF55AD14588F6100B5B6AC /* GGReplayTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -317,6 +344,11 @@
 		47D846C21452A61D0044746E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47D662D81459575E00B3AB29 /* Feed.png */,
+				47D662D91459575E00B3AB29 /* Feed@2x.png */,
+				47D662CA145950FF00B3AB29 /* StarHalfSelected.png */,
+				47D662CB145950FF00B3AB29 /* StarNonSelected.png */,
+				47D662CC145950FF00B3AB29 /* StarSelected.png */,
 				47436997145848A60071C9AD /* News.png */,
 				47436998145848A60071C9AD /* Matches.png */,
 				47436999145848A60071C9AD /* News@2x.png */,
@@ -584,6 +616,11 @@
 				474369A0145848A60071C9AD /* Matches@2x.png in Resources */,
 				474369A1145848A60071C9AD /* Replays.png in Resources */,
 				474369A2145848A60071C9AD /* Replays@2x.png in Resources */,
+				47D662CD145950FF00B3AB29 /* StarHalfSelected.png in Resources */,
+				47D662CE145950FF00B3AB29 /* StarNonSelected.png in Resources */,
+				47D662CF145950FF00B3AB29 /* StarSelected.png in Resources */,
+				47D662DA1459575E00B3AB29 /* Feed.png in Resources */,
+				47D662DB1459575E00B3AB29 /* Feed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +671,9 @@
 				474369821458342B0071C9AD /* GGActivityLabel.m in Sources */,
 				474369A5145855270071C9AD /* GGNewsTableViewCell.m in Sources */,
 				474369A914585C8B0071C9AD /* NSDate+Helper.m in Sources */,
+				47CF55AB14588F5300B5B6AC /* GGMatchTableViewCell.m in Sources */,
+				47CF55AE14588F6100B5B6AC /* GGReplayTableViewCell.m in Sources */,
+				47D662C414594D1E00B3AB29 /* SCRRatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

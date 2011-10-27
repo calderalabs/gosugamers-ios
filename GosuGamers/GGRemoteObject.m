@@ -11,7 +11,6 @@
 @implementation GGRemoteObject
 
 @synthesize uid = _uid;
-@synthesize createdAt = _createdAt;
 
 + (void)mapAttributes:(RKObjectMapping *)mapping {
     [mapping mapKeyPath:@"id" toAttribute:@"uid"];
