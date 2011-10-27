@@ -80,7 +80,9 @@
         _page = 1;
     }
     
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[[[self.class objectClass] path]
+    _loader.delegate = nil;
+    [_loader cancel];
+    _loader = [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[[[self.class objectClass] path]
                                                                 appendQueryParams:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                    _game.uid, @"game",
                                                                                    [NSNumber numberWithUnsignedInteger:_page], @"page",
@@ -95,14 +97,13 @@
     for(NSInteger i = 0; i < objects.count; i++)
         [indexPaths addObject:[NSIndexPath indexPathForRow:_objects.count + i inSection:0]];
 
-    if(_objects.count == 0) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:objects.count inSection:0]];
+    if(_objects.count == 0) { // If the table was empty before
+        [indexPaths addObject:[NSIndexPath indexPathForRow:objects.count inSection:0]]; // Add the more button row
         [self hideOverlayView];
     }
-    else {
-        [_moreCell stopAnimating];
-        _moreCell.userInteractionEnabled = YES;
-    }
+    
+    [_moreCell stopAnimating];
+    _moreCell.userInteractionEnabled = YES;
     
     [_objects addObjectsFromArray:objects];
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -128,6 +129,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self loadObjectsAddingResults:NO];
+}
+
+- (void)dealloc {
+    _loader.delegate = nil;
+    [_loader cancel];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
