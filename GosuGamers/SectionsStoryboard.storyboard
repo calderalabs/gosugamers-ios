@@ -147,8 +147,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="2Te-po-gTZ" id="wT8-Id-eQS"/>
-                        <outlet property="view" destination="Jvg-wh-Vec" id="BjA-0L-mAg"/>
+                        <outlet property="tableView" destination="2Te-po-gTZ" id="2hT-ua-4Fx"/>
+                        <outlet property="view" destination="Jvg-wh-Vec" id="iP1-88-SUl"/>
                     </connections>
                 </viewController>
             </objects>

@@ -91,7 +91,7 @@
                          _overlayView.alpha = 0.0;
                          _tableView.alpha = 1.0;
                      }
-                     completion:^(BOOL finished){ [_overlayView removeFromSuperview]; }];
+                     completion:^(BOOL finished){ if(finished) [_overlayView removeFromSuperview]; }];
 }
 
 - (void)viewDidLoad {

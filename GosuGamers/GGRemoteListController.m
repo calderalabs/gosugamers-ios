@@ -97,7 +97,7 @@
     for(NSInteger i = 0; i < objects.count; i++)
         [indexPaths addObject:[NSIndexPath indexPathForRow:_objects.count + i inSection:0]];
 
-    if(_objects.count == 0) // If the table was empty before
+    if(_objects.count == 0 && objects.count > 0) // If the table was empty before
         [indexPaths addObject:[NSIndexPath indexPathForRow:objects.count inSection:0]]; // Add the more button row
     
     [self hideOverlayView];
