@@ -97,11 +97,10 @@
     for(NSInteger i = 0; i < objects.count; i++)
         [indexPaths addObject:[NSIndexPath indexPathForRow:_objects.count + i inSection:0]];
 
-    if(_objects.count == 0) { // If the table was empty before
+    if(_objects.count == 0) // If the table was empty before
         [indexPaths addObject:[NSIndexPath indexPathForRow:objects.count inSection:0]]; // Add the more button row
-        [self hideOverlayView];
-    }
     
+    [self hideOverlayView];
     [_moreCell stopAnimating];
     _moreCell.userInteractionEnabled = YES;
     
@@ -182,10 +181,8 @@
     UITableViewCell *cell;
     
     if(indexPath.row == _objects.count) {
-        _moreCell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
-        
         if(!_moreCell)
-            _moreCell = [[GGActivityTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MoreCell"];
+            _moreCell = [[GGActivityTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         
         _moreCell.titleLabel.text = @"Load more...";
         
