@@ -326,9 +326,6 @@
 		47D846AC1452A61C0044746E = {
 			isa = PBXGroup;
 			children = (
-				47D662E41459694700B3AB29 /* AudioToolbox.framework */,
-				47D662E51459694800B3AB29 /* libz.dylib */,
-				47D662E61459694800B3AB29 /* Security.framework */,
 				47D846C11452A61D0044746E /* GosuGamers */,
 				47D846C21452A61D0044746E /* Supporting Files */,
 				47D846ED1452A61D0044746E /* GosuGamersTests */,
@@ -349,6 +346,9 @@
 		47D846BA1452A61D0044746E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47D662E51459694800B3AB29 /* libz.dylib */,
+				47D662E41459694700B3AB29 /* AudioToolbox.framework */,
+				47D662E61459694800B3AB29 /* Security.framework */,
 				47D662E21459690C00B3AB29 /* Parse.framework */,
 				47ECCCEA1456DF34009FC6D3 /* RestKit.xcodeproj */,
 				47ECCD1A1456DFC5009FC6D3 /* CFNetwork.framework */,

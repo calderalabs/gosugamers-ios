@@ -9,12 +9,16 @@
 #import "GGChannelsController.h"
 #import "Parse/Parse.h"
 #import "GGGame.h"
-#import "GGSwitchTableViewCell.h"
+
+@interface GGChannelsController ()
+
+- (NSString *)channelNameForIndexPath:(NSIndexPath *)indexPath;
+    
+@end
 
 @implementation GGChannelsController
 
 @synthesize delegate = _delegate;
-@synthesize channels = _channels;
 
 - (void)viewDidLoad
 {
@@ -25,10 +29,10 @@
            activityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     
     [PFPush getSubscribedChannelsInBackgroundWithBlock:^(NSSet *channels, NSError *error) {
-        if(!error)
+        if(error)
             [self showMessage:@"There was an error loading the channels from the server." color:[UIColor whiteColor]];
         else {
-            _channels = channels;
+            _channels = [NSMutableSet setWithSet:channels];
             [self.tableView reloadData];
             [self hideOverlayView];
         }
@@ -56,6 +60,13 @@
     return game.description;
 }
 
+- (NSString *)channelNameForIndexPath:(NSIndexPath *)indexPath {
+    GGGame *game = [[GGGame all] objectAtIndex:indexPath.section];
+    NSString *section = [game.sections objectAtIndex:indexPath.row];
+    
+    return [NSString stringWithFormat:@"%@_%@", game.uid, section];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GGGame *game = [[GGGame all] objectAtIndex:indexPath.section];
@@ -65,8 +76,24 @@
     
     GGSwitchTableViewCell *channelCell = (GGSwitchTableViewCell *)cell;
     channelCell.titleLabel.text = [section capitalizedString];
+    channelCell.switchView.on = [_channels containsObject:[self channelNameForIndexPath:indexPath]];
+    channelCell.delegate = self;
     
     return cell;
+}
+
+- (void)switchTableViewCellDidChangeValue:(GGSwitchTableViewCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSString *channel = [self channelNameForIndexPath:indexPath];
+    
+    if(cell.switchView.on) {
+        [_channels addObject:channel];
+        [PFPush subscribeToChannelInBackground:[self channelNameForIndexPath:indexPath]];
+    }
+    else {
+        [_channels removeObject:channel];
+        [PFPush unsubscribeFromChannelInBackground:channel];
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

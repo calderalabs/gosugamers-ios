@@ -57,6 +57,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Y6c-72-C5o">
                                                     <rect key="frame" x="201" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="cj3-LL-Hrb" eventType="valueChanged" id="PNc-bQ-XR1"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Channel" lineBreakMode="tailTruncation" minimumFontSize="10" id="IXk-lE-FQP">
                                                     <rect key="frame" x="13" y="11" width="64" height="21"/>
@@ -69,8 +72,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="switchView" destination="Y6c-72-C5o" id="Yqz-2w-ZNp"/>
-                                            <outlet property="titleLabel" destination="IXk-lE-FQP" id="CZe-HS-GhP"/>
+                                            <outlet property="switchView" destination="Y6c-72-C5o" id="Xfd-XJ-HUW"/>
+                                            <outlet property="titleLabel" destination="IXk-lE-FQP" id="Q1A-9r-0JC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -178,6 +181,7 @@
         <class className="GGSwitchTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GGSwitchTableViewCell.h"/>
             <relationships>
+                <relationship kind="action" name="switchChanged:"/>
                 <relationship kind="outlet" name="switchView" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>

@@ -8,9 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class GGSwitchTableViewCell;
+
+@protocol GGSwitchTableViewCellDelegate <NSObject>
+
+@optional
+- (void)switchTableViewCellDidChangeValue:(GGSwitchTableViewCell *)cell;
+
+@end
+
 @interface GGSwitchTableViewCell : UITableViewCell
 
 @property (nonatomic, readonly, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, readonly, strong) IBOutlet UISwitch *switchView;
+@property (nonatomic, weak) id<GGSwitchTableViewCellDelegate> delegate;
+
+- (IBAction)switchChanged:(id)sender;
 
 @end

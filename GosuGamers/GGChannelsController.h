@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GGTableViewController.h"
+#import "GGSwitchTableViewCell.h"
 
 @class GGChannelsController;
 
@@ -18,10 +19,11 @@
 
 @end
 
-@interface GGChannelsController : GGTableViewController
+@interface GGChannelsController : GGTableViewController <GGSwitchTableViewCellDelegate> {
+    NSMutableSet *_channels;
+}
 
 @property (nonatomic, weak) id<GGChannelsControllerDelegate> delegate;
-@property (nonatomic, strong, readonly) NSSet *channels;
 
 - (IBAction)cancel:(id)sender;
 

@@ -33,7 +33,6 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameCell"];
     cell.textLabel.text = game.description;
-    cell.tag = indexPath.row;
     
     return cell;
 }
@@ -64,7 +63,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"SelectGame"]) {
-        NSUInteger row = [sender tag];
+        NSUInteger row = [self.tableView indexPathForCell:sender].row;
         GGGame *game = [[GGGame all] objectAtIndex:row];
         
         UITabBarController *tabBarController = segue.destinationViewController;

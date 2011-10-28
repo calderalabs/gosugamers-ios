@@ -18,10 +18,13 @@
     /* Parse Configuration */
     
     [Parse setApplicationId:@"1LRW5L2C4f1bBe9glvo38jZ8Sp3k6zVlzfSTUjky" clientKey:@"NxXxGaLu5qqsJ8Y9eM4n7jOow1pXwxkKnGQZfjH3"];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
     
     /* RestKit configuration */
     
-    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
+    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.herokuapp.com"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+01:00'"];
@@ -36,6 +39,17 @@
                                                                         alpha:1]];
 
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    [PFPush storeDeviceToken:newDeviceToken];
+}
+
+- (void)application:(UIApplication *)application 
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

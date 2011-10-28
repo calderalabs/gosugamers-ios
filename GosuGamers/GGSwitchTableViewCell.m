@@ -12,5 +12,11 @@
 
 @synthesize switchView = _switchView;
 @synthesize titleLabel = _titleLabel;
+@synthesize delegate = _delegate;
+
+- (IBAction)switchChanged:(id)sender {
+    if([_delegate respondsToSelector:@selector(switchTableViewCellDidChangeValue:)])
+        [_delegate switchTableViewCellDidChangeValue:self];
+}
 
 @end
