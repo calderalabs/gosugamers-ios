@@ -24,7 +24,7 @@
     
     /* RestKit configuration */
     
-    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.herokuapp.com"];
+    [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+01:00'"];
