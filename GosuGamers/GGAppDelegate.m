@@ -25,9 +25,16 @@
     /* RestKit configuration */
     
     [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+01:00'"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [RKObjectMapping addDefaultDateFormatter:formatter]; 
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
     [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
     [RKObjectMapping addDefaultDateFormatter:formatter]; 
     
@@ -38,7 +45,19 @@
                                                                          blue:113/255.0
                                                                         alpha:1]];
 
+    NSDictionary *notification = [launchOptions valueForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    if(notification) {
+        [self viewNotification:notification];
+    }
+    
+    application.applicationIconBadgeNumber = 0;
+    
     return YES;
+}
+
+- (void)viewNotification:(NSDictionary *)notification {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[notification valueForKey:@"url"]]];
 }
 
 - (void)application:(UIApplication *)application
@@ -49,7 +68,23 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
 
 - (void)application:(UIApplication *)application 
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+    _receivedNotification = userInfo;
+    
+    NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:appName
+                                                        message:[[_receivedNotification valueForKey:@"aps"] valueForKey:@"alert"]
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:@"View", nil];
+    [alertView show];
+    
+    application.applicationIconBadgeNumber--;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == alertView.firstOtherButtonIndex) {
+        [self viewNotification:_receivedNotification];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

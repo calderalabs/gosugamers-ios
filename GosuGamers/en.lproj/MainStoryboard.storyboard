@@ -81,7 +81,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Channels" id="r5r-6j-Aix">
+                    <navigationItem key="navigationItem" title="Subscriptions" id="r5r-6j-Aix">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CkN-jg-YdJ">
                             <connections>
                                 <action selector="cancel:" destination="lpI-Ej-7Nz" id="x43-Wo-KKc"/>

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGAppDelegate : UIResponder <UIApplicationDelegate>
+@interface GGAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate> {
+    NSDictionary *_receivedNotification;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)viewNotification:(NSDictionary *)notification;
 
 @end

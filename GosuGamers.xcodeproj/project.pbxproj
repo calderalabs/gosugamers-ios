@@ -18,6 +18,8 @@
 		474369A2145848A60071C9AD /* Replays@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4743699C145848A60071C9AD /* Replays@2x.png */; };
 		474369A5145855270071C9AD /* GGNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A4145855270071C9AD /* GGNewsTableViewCell.m */; };
 		474369A914585C8B0071C9AD /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 474369A814585C8B0071C9AD /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4791F81D145B3AF300D46769 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4791F81C145B3AF300D46769 /* Icon.png */; };
+		4791F81F145B3AF700D46769 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4791F81E145B3AF700D46769 /* Icon@2x.png */; };
 		4798DF731459CF5800F3635D /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4798DF711459CF5800F3635D /* Settings.png */; };
 		4798DF741459CF5800F3635D /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4798DF721459CF5800F3635D /* Settings@2x.png */; };
 		47CF55AB14588F5300B5B6AC /* GGMatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CF55AA14588F5300B5B6AC /* GGMatchTableViewCell.m */; };
@@ -186,6 +188,8 @@
 		474369A4145855270071C9AD /* GGNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNewsTableViewCell.m; sourceTree = "<group>"; };
 		474369A714585C8B0071C9AD /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		474369A814585C8B0071C9AD /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		4791F81C145B3AF300D46769 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		4791F81E145B3AF700D46769 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		4798DF711459CF5800F3635D /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 		4798DF721459CF5800F3635D /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
 		47CF55A914588F5300B5B6AC /* GGMatchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMatchTableViewCell.h; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 		47D846C21452A61D0044746E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4791F81E145B3AF700D46769 /* Icon@2x.png */,
+				4791F81C145B3AF300D46769 /* Icon.png */,
 				4798DF711459CF5800F3635D /* Settings.png */,
 				4798DF721459CF5800F3635D /* Settings@2x.png */,
 				47D662CA145950FF00B3AB29 /* StarHalfSelected.png */,
@@ -662,6 +668,8 @@
 				47D662CF145950FF00B3AB29 /* StarSelected.png in Resources */,
 				4798DF731459CF5800F3635D /* Settings.png in Resources */,
 				4798DF741459CF5800F3635D /* Settings@2x.png in Resources */,
+				4791F81D145B3AF300D46769 /* Icon.png in Resources */,
+				4791F81F145B3AF700D46769 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +848,7 @@
 				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -857,6 +866,7 @@
 				GCC_PREFIX_HEADER = "GosuGamers/GosuGamers-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "GosuGamers/GosuGamers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
