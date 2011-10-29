@@ -17,14 +17,23 @@
 {
     /* Parse Configuration */
     
+#ifdef DEBUG
     [Parse setApplicationId:@"1LRW5L2C4f1bBe9glvo38jZ8Sp3k6zVlzfSTUjky" clientKey:@"NxXxGaLu5qqsJ8Y9eM4n7jOow1pXwxkKnGQZfjH3"];
+#else
+    [Parse setApplicationId:@"nAVbdN6DkXqC23vObndhN3IXbIgoGKHQ26LeeIVS" clientKey:@"Aaslb17svjzVtUEocvJ643DQuzcW5Jb15XZU1qT0"];
+#endif
+    
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
     
     /* RestKit configuration */
     
+#ifdef DEBUG
+    [RKObjectManager objectManagerWithBaseURL:@"http://192.168.1.4:3000"];
+#else
     [RKObjectManager objectManagerWithBaseURL:@"http://gosugamers-api.heroku.com"];
+#endif
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];

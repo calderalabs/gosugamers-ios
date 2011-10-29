@@ -174,6 +174,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474001AA145C08FA00A2EEE9 /* GosuGamers copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GosuGamers copy-Info.plist"; path = "/Users/eugeniodepalo/Projects/GosuGamers/GosuGamers copy-Info.plist"; sourceTree = "<absolute>"; };
 		474369801458342B0071C9AD /* GGActivityLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGActivityLabel.h; sourceTree = "<group>"; };
 		474369811458342B0071C9AD /* GGActivityLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGActivityLabel.m; sourceTree = "<group>"; };
 		47436987145845360071C9AD /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 				47D846ED1452A61D0044746E /* GosuGamersTests */,
 				47D846BA1452A61D0044746E /* Frameworks */,
 				47D846B81452A61D0044746E /* Products */,
+				474001AA145C08FA00A2EEE9 /* GosuGamers copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
